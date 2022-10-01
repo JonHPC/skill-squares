@@ -1,13 +1,14 @@
 import { useState } from 'react'
-import './App.css'
 import Header from './components/Header'
 import SquareContainer from './components/SquareContainer'
+import Footer from './components/Footer'
 function App() {
 
   return (
-    <div className="App">
+    <div className="App flex flex-col w-screen h-full justify-between bg-gray-900">
       <Header />
       <SquareContainer />
+      <Footer />
     </div>
   )
 }

@@ -3,7 +3,7 @@
 function SquareContainer() {
 
     return (
-      <div className="square-container">
+      <div className="square-container bg-gray-900">
         <h1>SquareContainer.jsx</h1>
       </div>
     )

@@ -1,0 +1,44 @@
+{
+    "skills": [
+        {
+            "id":1,
+            "text": "Virtual DOM",
+            "green": false
+        },
+        {
+            "id":2,
+            "text": "React",
+            "green": true
+        },
+        {
+            "id":3,
+            "text": "Node",
+            "green": false
+        },
+        {
+            "id":4,
+            "text": "Databases",
+            "green": false
+        },
+        {
+            "id":5,
+            "text": "Event Loop",
+            "green": false
+        },
+        {
+            "id":6,
+            "text": "Narrative",
+            "green": true
+        },
+        {
+            "id":7,
+            "text": "Closure",
+            "green": false
+        },
+        {
+            "id":8,
+            "text": "TypeScript",
+            "green": true
+        }
+    ]
+}
