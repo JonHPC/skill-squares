@@ -3,6 +3,8 @@
 (Link not yet active)
 [skillsquares.app](https://skillsquares.app)
 
+<img src="https://user-images.githubusercontent.com/34523493/193437171-4e417bb2-d30b-4f40-8b1b-ae85febc62cb.png" />
+
 After cloning this repo:
 ```
 cd skill-squares
