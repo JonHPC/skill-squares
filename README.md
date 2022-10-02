@@ -18,7 +18,12 @@ npm run backend
 ```
 At this point, if you do a GET request to `http://localhost:3000/skills` you will have access to the data
 
-To spin up the front end on `localhost:5173`, open another terminal tab:
+Note: Because Tailwind CSS is used in this project, you have to specify and input and output css file to enable hot module reloading. Run the following script prior to spinning up the frontend.
+```
+npm run tailwind
+```
+
+Finally, to start the app on `localhost:5173`, open another terminal tab and run:
 ```
 npm run dev
 ```

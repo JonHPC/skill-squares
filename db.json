@@ -3,17 +3,17 @@
     {
       "id": 1,
       "text": "Virtual DOM",
-      "green": true
+      "green": false
     },
     {
       "id": 2,
       "text": "React",
-      "green": false
+      "green": true
     },
     {
       "id": 3,
       "text": "Node",
-      "green": true
+      "green": false
     },
     {
       "id": 4,
@@ -23,7 +23,7 @@
     {
       "id": 5,
       "text": "Event Loop",
-      "green": true
+      "green": false
     },
     {
       "id": 6,
