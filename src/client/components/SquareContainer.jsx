@@ -16,7 +16,7 @@ function SquareContainer() {
   const fetchAllSkills = () => {
     axios.get('/skills')
       .then(response => {
-        setSkills(response.data)
+        setSkills([...response.data])
         response.data ? setAreSquares(true) : setAreSquares(false)
       })
   }
@@ -29,25 +29,26 @@ function SquareContainer() {
   async function toggleSquare(id){
     
     const skillToToggle = await fetchSkill(id)
-    console.log('toggleSquare skillToToggle: ', skillToToggle)
+    //console.log('toggleSquare skillToToggle: ', skillToToggle)
     const payload = {...skillToToggle, green: !skillToToggle.green}
     axios.patch(`skills/${id}`, payload)
       .then(res => {
         const data = res.data
-        console.log('toggleSquare data: ', data)
-        console.log('toggleSquare before map skills: ', skills)
-        const updatedSkills = []
-        for(let i = 0; i < skills.length; i++){
-          if(skills[i].id === data.id){
+        //console.log('toggleSquare data: ', data)
+        //console.log('toggleSquare before map skills: ', skills)
+        let oldSkills = skills
+        let updatedSkills = []
+        oldSkills.forEach(el => {
+          if(el.id === data.id){
             updatedSkills.push(data)
           }else{
-            updatedSkills.push(skills[i])
+            updatedSkills.push(el)
           }
-        }
-        console.log('updatedSkills after map: ', updatedSkills)
-        setSkills(updatedSkills)
-        updatedSkills ? setAreSquares(true) : setAreSquares(false)
-        console.log('toggleSquare after map skills: ', skills)
+        })
+        //console.log('updatedSkills after map: ', updatedSkills)
+        setSkills([...updatedSkills])
+        window.location.reload()
+        //console.log('toggleSquare after map skills: ', skills)
       })
   }
   
@@ -56,7 +57,7 @@ function SquareContainer() {
       {areSquares ? 
       <Squares toggleSquare={toggleSquare} skills={skills}/>
       :
-      <h1>Click to add Skill</h1>
+      <h1></h1>
       }
     </div>
   )

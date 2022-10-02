@@ -6,14 +6,18 @@ function Squares(props) {
 
     const [skills, setSkills] = useState(props.skills)
     const [display, setDisplay] = useState()
+    useEffect(() => {
+        console.log('Squares.jsx re-render')
+        setSkills(props.skills)
+    })
 
     useEffect(() => {
         const rows = []
         skills.map(el => {
             rows.push(<Square toggleSquare={props.toggleSquare} id={el.id} key={el.id} skill={el} />)
         })
-        setDisplay(rows)
-        //console.log('Squares.jsx useEffect display: ', display)
+        setDisplay([...rows])
+        console.log('Squares.jsx useEffect display: ', display)
     }, [skills, setSkills])
     
 
