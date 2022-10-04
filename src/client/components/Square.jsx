@@ -8,8 +8,8 @@ function Square(props) {
     const [skillId, setSkillId] = useState(skill.id)
 
     useEffect(() => {
-
-    })
+      
+    },)
 
     const handleClick = (e) => {
       props.toggleSquare(skillId)
