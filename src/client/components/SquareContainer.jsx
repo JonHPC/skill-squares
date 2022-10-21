@@ -9,7 +9,6 @@ function SquareContainer() {
   const [areSquares, setAreSquares] = useState(false)
 
   useEffect(() => {
-    console.log('SquareContainer useEffect')
     fetchAllSkills()
   },[])
 
@@ -31,38 +30,20 @@ function SquareContainer() {
   async function toggleSquare(id){
     
     const skillToToggle = await fetchSkill(id)
-    //console.log('toggleSquare skillToToggle: ', skillToToggle)
     const payload = {...skillToToggle, green: !skillToToggle.green}
     axios.patch(`skills/${id}`, payload)
       .then(res => {
-        // const data = res.data
-        // //console.log('toggleSquare data: ', data)
-        // console.log('toggleSquare before map skills: ', skills)
-        // let oldSkills = skills
-        // let updatedSkills = []
-        // oldSkills.forEach(el => {
-        //   if(el.id === data.id){
-        //     updatedSkills.push(data)
-        //   }else{
-        //     updatedSkills.push(el)
-        //   }
-        // })
-        // console.log('updatedSkills after map: ', updatedSkills)
-        // setSkills([...updatedSkills])
-        // //window.location.reload()
-        // console.log('toggleSquare after map skills: ', skills)
         fetchAllSkills()
       })
   }
   
   return (
     <div className="square-container flex justify-center items-center bg-gray-900 p-4">
-      <Squares toggleSquare={toggleSquare} skills={skills}/>
-      {/* {areSquares ? 
+      {areSquares ? 
       <Squares toggleSquare={toggleSquare} skills={skills}/>
       :
-      <h1></h1>
-      } */}
+      <h1>Add squares</h1>
+      }
     </div>
   )
 }
