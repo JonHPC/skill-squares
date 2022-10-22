@@ -5,7 +5,7 @@ function Squares(props) {
   
     const rows = []
     props.skills.forEach(el => {
-        rows.push(<Square toggleSquare={props.toggleSquare} skill={el} key={el._id}/>)
+        rows.push(<Square toggleSquare={props.toggleSquare} deleteSquare={props.deleteSquare} skill={el} key={el._id} editing={props.editing}/>)
     })
 
     return (

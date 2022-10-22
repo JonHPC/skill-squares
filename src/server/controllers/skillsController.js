@@ -24,8 +24,7 @@ skillsController.getSkill = (req, res, next) => {
     })
 }
 
-skillsController.toggleSquare = (req, res, next) => {
-    //console.log('skillsController.toggleSquare')
+skillsController.toggleSkill = (req, res, next) => {
     const {_id, green} = req.body
     Skills.findOneAndUpdate({_id}, {green})
     .exec()
@@ -49,6 +48,14 @@ skillsController.addSkill = (req, res, next) => {
 }
 
 skillsController.deleteSkill = (req, res, next) => {
+    const {_id} = req.body
+    //console.log('skillsController.deleteSkill _id: ', _id)
+    Skills.findOneAndDelete({_id})
+    .exec()
+    .then((data) => {
+        res.locals.skill = data
+        next()
+    })
 }
 
 export default skillsController

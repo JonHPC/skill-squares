@@ -14,8 +14,12 @@ router.post('/add', skillsController.addSkill, (req, res) => {
     res.status(200).json(res.locals.skill)
 })
 
-router.patch('/', skillsController.toggleSquare, (req, res) => {
+router.patch('/', skillsController.toggleSkill, (req, res) => {
     res.status(200).json(res.locals.skill)
 })
+
+router.delete('/', skillsController.deleteSkill, (req, res) => {
+    res.status(200).json(res.locals.skill)
+} )
 
 export default router
