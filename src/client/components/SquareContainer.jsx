@@ -17,21 +17,21 @@ function SquareContainer() {
     axios.get('/skills')
       .then(response => {
         setSkills([...response.data])
-        console.log('toggleSquare after GET skills: ', skills)
-        response.data ? setAreSquares(true) : setAreSquares(false)
+        //console.log('toggleSquare after GET skills: ', skills)
+        response.data.length ? setAreSquares(true) : setAreSquares(false)
       })
   }
 
-  async function fetchSkill(id){
-    const res = await axios.get(`skills/${id}`)
+  async function fetchSkill(_id){
+    const res = await axios.post(`skills`, {_id})
     return res.data
   }
 
   async function toggleSquare(id){
-    
     const skillToToggle = await fetchSkill(id)
     const payload = {...skillToToggle, green: !skillToToggle.green}
-    axios.patch(`skills/${id}`, payload)
+    //console.log('SquareContainer payload: ', payload)
+    axios.patch(`skills`, payload)
       .then(res => {
         fetchAllSkills()
       })
