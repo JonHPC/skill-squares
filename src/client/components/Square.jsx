@@ -3,7 +3,7 @@
 function Square(props) {
 
     const handleClick = (e) => {
-      props.toggleSquare(props.skill.id)
+      props.toggleSquare(props.skill._id)
     }
 
     return (
