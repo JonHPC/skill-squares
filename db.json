@@ -13,12 +13,12 @@
     {
       "id": 3,
       "text": "Node",
-      "green": true
+      "green": false
     },
     {
       "id": 4,
       "text": "Databases",
-      "green": false
+      "green": true
     },
     {
       "id": 5,
@@ -33,12 +33,12 @@
     {
       "id": 7,
       "text": "Closure",
-      "green": false
+      "green": true
     },
     {
       "id": 8,
       "text": "TypeScript",
-      "green": true
+      "green": false
     }
   ]
 }
