@@ -10,9 +10,7 @@ After cloning this repo:
 cd skill-squares
 npm install
 ```
-There is currently no real data base, instead, 'json-server' is used as a local db.
-If you take a look at `db.json`, data is stored there. 
-To spin up a mock server:
+To spin up the Express server, run the following:
 ```
 npm run backend
 ```

@@ -7,6 +7,7 @@ function SquareContainer() {
 
   const [skills, setSkills] = useState([])
   const [areSquares, setAreSquares] = useState(false)
+  const [input, setInput] = useState("")
 
   useEffect(() => {
     fetchAllSkills()
@@ -36,14 +37,42 @@ function SquareContainer() {
         fetchAllSkills()
       })
   }
+
+  const handleChange = (e) => {
+    //console.log(e.target.value)
+    setInput(e.target.value)
+  }
+
+  const handleSubmit = () => {
+    console.log('handleSubmit')
+    const payload = {
+      text: input,
+      green: false
+    }
+    if(input){
+      axios.post('/skills/add', payload)
+      .then((res)=>{
+        setInput("")
+        const input = document.getElementById('input')
+        input.value = ""
+        fetchAllSkills()
+      })
+    }
+  }
   
   return (
-    <div className="square-container flex justify-center items-center bg-gray-900 p-4">
-      {areSquares ? 
-      <Squares toggleSquare={toggleSquare} skills={skills}/>
-      :
-      <h1>Add squares</h1>
-      }
+    <div className="flex-col justify-start items-center h-full pt-8">
+      <div className="flex justify-center items-center gap gap-4">
+        <input id="input" onChange={handleChange} type="text" placeholder="Type skill here..." className="p-2"></input>
+        <button onClick={handleSubmit} className="bg-emerald-400 rounded-none border-0 text-gray-800 transition hover:bg-emerald-300 hover:cursor-pointer active:bg-emerald-400 p-2">Add Square</button>
+      </div>
+      <div className="square-container flex justify-center items-center bg-gray-900 p-4">
+        {areSquares ? 
+        <Squares toggleSquare={toggleSquare} skills={skills}/>
+        :
+        <h1>Add squares</h1>
+        }
+      </div>
     </div>
   )
 }

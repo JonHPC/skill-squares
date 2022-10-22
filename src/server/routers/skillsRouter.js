@@ -10,6 +10,10 @@ router.post('/', skillsController.getSkill, (req, res) => {
     res.status(200).json(res.locals.skill)
 })
 
+router.post('/add', skillsController.addSkill, (req, res) => {
+    res.status(200).json(res.locals.skill)
+})
+
 router.patch('/', skillsController.toggleSquare, (req, res) => {
     res.status(200).json(res.locals.skill)
 })

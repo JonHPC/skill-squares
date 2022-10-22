@@ -35,4 +35,20 @@ skillsController.toggleSquare = (req, res, next) => {
     })
 }
 
+skillsController.addSkill = (req, res, next) => {
+    const {text, green} = req.body
+    const payload = {
+        text,
+        green
+    }
+    Skills.create(payload)
+    .then((data) => {
+        res.locals.skill = data
+        next()
+    })
+}
+
+skillsController.deleteSkill = (req, res, next) => {
+}
+
 export default skillsController
