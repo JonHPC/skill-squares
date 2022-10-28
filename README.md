@@ -22,8 +22,7 @@ To spin up the Express server, run the following:
 npm run backend
 ```
 
-
-Note: Because Tailwind CSS is used in this project, you have to specify and input and output css file to enable hot module reloading. Run the following script prior to spinning up the frontend.
+Note: Because Tailwind CSS is used in this project, you have to specify and input and output css file to enable hot module reloading. Run the following script prior to spinning up the frontend if you want to make changes to your Tailwind CSS.
 ```
 npm run tailwind
 ```
