@@ -10,11 +10,18 @@ After cloning this repo:
 cd skill-squares
 npm install
 ```
+Create a .env file with the following information:
+```
+DB_USERNAME = <your Mongo username>
+DB_PASSWORD = <your Mongo password>
+```
+The above are called in `server/models/skillsModel.js`
+
 To spin up the Express server, run the following:
 ```
 npm run backend
 ```
-At this point, if you do a GET request to `http://localhost:3000/skills` you will have access to the data
+
 
 Note: Because Tailwind CSS is used in this project, you have to specify and input and output css file to enable hot module reloading. Run the following script prior to spinning up the frontend.
 ```
