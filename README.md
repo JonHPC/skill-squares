@@ -3,7 +3,7 @@
 (Link not yet active)
 [skillsquares.app](https://skillsquares.app)
 
-<img width="400px" src="https://user-images.githubusercontent.com/34523493/193437171-4e417bb2-d30b-4f40-8b1b-ae85febc62cb.png" />
+<img width="600" src="https://user-images.githubusercontent.com/34523493/198690597-d63e363a-7159-44e1-b6a6-f75df5ec3788.gif" />
 
 After cloning this repo:
 ```
