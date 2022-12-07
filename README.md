@@ -1,6 +1,6 @@
 # Skill Squares
 ## The best way to keep track of your interview skills!
-(Link not yet active)
+(Link TBD)
 [skillsquares.app](https://skillsquares.app)
 
 <img width="600" src="https://user-images.githubusercontent.com/34523493/198690597-d63e363a-7159-44e1-b6a6-f75df5ec3788.gif" />
