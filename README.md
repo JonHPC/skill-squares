@@ -38,9 +38,3 @@ npm run build
 npm run preview
 ```
 You should be able to view the built site at `localhost:4173`
-
-
--------
-Future changes:
--Refactor backend to utilize Java/Springboot
--Refactor frontend to utilize Angular
